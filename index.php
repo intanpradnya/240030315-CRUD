@@ -12,6 +12,13 @@
     <title>Document</title>
 </head>
 <body>
+    <nav class="navbar navbar-light bg-light">
+  		<div class="container-fluid">
+    		<a class="navbar-brand" href="#">
+     	CRUD - BS5
+  			</a>
+  		</div>
+	</nav>
     
 </body>
 </html>
