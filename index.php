@@ -19,6 +19,22 @@
   			</a>
   		</div>
 	</nav>
-    
+    <!-- Judul --> 
+<div class="container-fluid">
+	<h1 class="mt-4">Data Siswa</h1>
+	<figure>
+  		<blockquote class="blockquote">
+    		<p>Berisi data yang telah disimpan di database.</p>
+  		</blockquote>
+ 	 <figcaption class="blockquote-footer">
+   		CRUD <cite title="Source Title">Create Read Update Delete</cite>
+  		</figcaption>
+	</figure>
+    <a href="kelola.php" type="button" class="btn btn-primary mb-3">
+		<i class="fa fa-plus"></i>
+
+	Tambah Data
+</a>
+
 </body>
 </html>
