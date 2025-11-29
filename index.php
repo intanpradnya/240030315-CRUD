@@ -35,6 +35,58 @@
 
 	Tambah Data
 </a>
+<div class="table-responsive">
+		  <table class="table align-middle table-bordered table-hover">
+		    <thead>
+		      <tr>
+		        <th>No.</th>
+		        <th>NIM</th>
+		        <th>Nama Mahasiswa</th>
+		        <th>Jenis Kelamin</th>
+		        <th>Foto Mahasiswa</th>
+		        <th>Alamat</th>
+		        <th>Aksi</th>
+		       </tr>
+		    </thead>
 
+		    <tbody>
+			<?php
+				while($result = mysqli_fetch_assoc($sql)){
+			?>
+		      <tr>
+		        <th scope="row">
+					<?php echo ++$no; ?>
+				</th>
+		        <td>
+					<?php echo $result['nim']; ?>
+				</td>
+		        <td>
+					<?php echo $result['nama_mahasiswa']; ?>
+				</td>
+		        <td>
+					<?php echo $result['jenis_kelamin']; ?>
+				</td>
+		        <td>
+		        	<img src="img/<?php echo $result['foto_mahasiswa']; ?>" style="width: 150px;">
+		        </td>
+		        <td>
+					<?php echo $result['alamat']; ?>
+				</td>
+		        <td>
+		        	<a href="kelola.php?ubah=<?php echo $result['id_mahasiswa']; ?>" type= "button" class="btn btn-success btn-sm">
+		        		<i class="fa fa-pencil"></i>
+		        	</a>
+		        	<a href="proses.php?hapus=<?php echo $result['id_mahasiswa']; ?>" type= "button" class="btn btn-danger btn-sm" onClick="return confirm('Apakah anda yakin ingin menghapus data tersebut???')">
+		        		<i class="fa fa-trash"></i>
+		        	</a>
+		        </td>
+		      </tr>    
+			  <?php
+				}
+				?>
+		  </tbody>
+		</table>
+	</div>
+</div>
 </body>
 </html>
