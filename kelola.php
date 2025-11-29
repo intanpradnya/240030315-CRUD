@@ -8,7 +8,7 @@
    
     <!-- Font Awesome --> 
 	<link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
-	<title>uts_crud</title>
+	<title>240030315-CRUD</title>
 </head>
 <body>
 	<nav class="navbar navbar-light bg-light mb-4">
@@ -19,7 +19,9 @@
   		</div>
 	</nav>
 	<div class="container">
-	<form method="POST" action="proses.php">
+	<form method="POST" action="proses.php" enctype="multipart/form-data">
+        <input type="hidden" value="<?php echo $id_mahasiswa; ?>" name="id_mahasiswa">
+
 			<div class="mb-3 row">
 				<label for="nim" class="col-sm-2 col-form-label">
 				NIM </label>
