@@ -1,3 +1,12 @@
+<?php
+	include 'koneksi.php';
+
+	$query = "SELECT * FROM tb_mahasiswa;";
+	$sql = mysqli_query($conn, $query);
+	$no = 0 
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
