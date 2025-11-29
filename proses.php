@@ -19,7 +19,7 @@
 
             $query = "INSERT INTO tb_mahasiswa VALUES(null, '$nim', '$namaMahasiswa', '$jenisKelamin', '$foto', '$alamat')"; 
 			$sql = mysqli_query($conn, $query); 
-            
+
             if($sql){
 				header("location: index.php"); 
 			}else{
@@ -38,3 +38,11 @@
 			$queryShow = "SELECT * FROM tb_mahasiswa WHERE id_mahasiswa = '$id_mahasiswa';";
 			$sqlShow = mysqli_query($conn, $queryShow); 
 			$result = mysqli_fetch_assoc($sqlShow); 
+
+            if($_FILES['foto']['name'] == ""){
+					$foto = $result['foto_mahasiswa']; 
+				}else{
+					$foto = $_FILES['foto']['name']; 
+					unlink("img/".$result['foto_mahasiswa']); 
+					move_uploaded_file($_FILES['foto']['tmp_name'], 'img/'.$_FILES['foto']['name']); 
+				}
