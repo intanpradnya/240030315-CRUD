@@ -5,6 +5,7 @@
     <!-- Bootstrap --> 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<script src="js/bootstrap.bundle.min.js" ></script>
+   
     <!-- Font Awesome --> 
 	<link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
 	<title>uts_crud</title>
@@ -69,6 +70,13 @@
 				?>
 					<button type="submit" name="aksi" value="edit" class="btn btn-primary">
 						<i class="fa fa-floppy-o" aria-hidden="true"></i>
+            Simpan Perubahan  
+			</button>
+			<?php
+				} else {
+			?>
+				<button type="submit" name="aksi" value="add" class="btn btn-primary">
+						<i class="fa fa-floppy-o" aria-hidden="true"></i>
                 Tambahkan  
 			</button>
 			<?php
@@ -83,10 +91,4 @@
 		</form>
 		</div>
 </body>
-</html>
-
-
-
-
-
 </html>
