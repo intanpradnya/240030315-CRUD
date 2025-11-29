@@ -16,6 +16,25 @@
 
 			//die(); 
 
-            
+
             $query = "INSERT INTO tb_mahasiswa VALUES(null, '$nim', '$namaMahasiswa', '$jenisKelamin', '$foto', '$alamat')"; 
 			$sql = mysqli_query($conn, $query); 
+            
+            if($sql){
+				header("location: index.php"); 
+			}else{
+				echo $query; 
+			}
+			
+		} else if($_POST['aksi'] == "edit"){
+			//echo "Edit Data <a href='index.php'>[Home]</a>"; 
+			//var_dump($_POST);
+			$id_mahasiswa = $_POST['id_mahasiswa']; 
+			$nim = $_POST['nim'];
+			$nama_mahasiswa = $_POST['nama_mahasiswa'];
+			$jenis_kelamin = $_POST['jenis_kelamin'];
+			$alamat = $_POST['alamat'];
+
+			$queryShow = "SELECT * FROM tb_mahasiswa WHERE id_mahasiswa = '$id_mahasiswa';";
+			$sqlShow = mysqli_query($conn, $queryShow); 
+			$result = mysqli_fetch_assoc($sqlShow); 
