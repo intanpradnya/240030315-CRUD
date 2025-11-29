@@ -13,6 +13,55 @@
 	<nav class="navbar navbar-light bg-light mb-4">
   		<div class="container-fluid">
     		<a class="navbar-brand" href="#">
+                CRUD - BS5
+  			</a>
+  		</div>
+	</nav>
+	<div class="container">
+	<form method="POST" action="proses.php">
+			<div class="mb-3 row">
+				<label for="nim" class="col-sm-2 col-form-label">
+				NIM </label>
+			<div class="col-sm-10">
+				<input type="text" name="nim"class="form-control" id="nim" placeholder="Ex: 111222333">
+			</div>
+		</div>
+		<div class="mb-3 row">
+			<label for="nama" class="col-sm-2 col-form-label">
+				Nama Mahasiswa 
+			</label>
+			<div class="col-sm-10"> 
+				<input type="text" name="nama_mahasiswa" class="form-control" id="nama" placeholder="Ex: Agung Deva Intan"> 
+			</div>
+		</div>
+<div class="mb-3 row">
+	 <label for="jkel" class="col-sm-2 col-form-label">
+						  Jenis Kelamin</label>
+						  <div class="col-sm-10">
+			<select id="jkel" name= "jenis_kelamin"class="form-select">
+			 <option selected>Jenis Kelamin</option>
+			 <option value="Laki-laki">Laki-laki</option>
+			<option value="Perempuan">Perempuan</option>
+			</select>
+
+			  </div>
+			</div>
+				<div class="mb-3 row">
+			  <label for="foto" class="col-sm-2 col-form-label">
+			  Foto Mahasiswa</label>
+			  <div class="col-sm-10">
+			   <input class="form-control" type="file" name="foto" id="foto">
+			  </div>
+			</div>
+				</div>
+				<div class="mb-3 row">
+			  <label for="alamat" class="col-sm-2 col-form-label">
+			 Alamat Lengkap
+			</label>
+			  <div class="col-sm-10">
+			   <textarea class="form-control" id="alamat" name="alamat" rows="3"></textarea>
+			  </div>
+		</div>
 
 
 
