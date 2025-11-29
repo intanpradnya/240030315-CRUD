@@ -62,7 +62,28 @@
 			   <textarea class="form-control" id="alamat" name="alamat" rows="3"></textarea>
 			  </div>
 		</div>
-
+        <div class="mb-3 row mt-4">
+			<div class="col"> 
+				<?php
+					if(isset($_GET['ubah'])){
+				?>
+					<button type="submit" name="aksi" value="edit" class="btn btn-primary">
+						<i class="fa fa-floppy-o" aria-hidden="true"></i>
+                Tambahkan  
+			</button>
+			<?php
+				}
+                ?>
+			<a href="index.php" type="button" class="btn btn-danger">
+				<i class="fa fa-reply" aria-hidden="true"></i>
+				Batal  
+			</a>
+			</div>
+		</div>
+		</form>
+		</div>
+</body>
+</html>
 
 
 
